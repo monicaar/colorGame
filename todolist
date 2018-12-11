@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+		.clicked{
+			text-decoration: line-through;
+			opacity: 0.5;
+
+		}
+		body{
+			background: #232323;
+		}
+		h1{
+			color: orange;
+			text-align: center;
+		}
+		li{
+			border:1px solid orange;
+			text-align: center;
+			padding-bottom: 1.66%;
+			margin-bottom: 1.45%;
+			background-color: rgb(99,16,245);
+		}
+
+	</style>
+
+ 
+
+
+</head>
+
+<body>
+
+	<h1>MyTodoList</h1>
+<h2>
+<ol>
+	<li>Eat</li>
+	<li>Sleep</li>
+	<li>Program</li>
+	<li>Repeat</li>
+</ol>
+</h2>
+<script type="text/javascript">
+	
+var lis=document.querySelectorAll("li");
+for(var i=0;i<lis.length;i++){
+lis[i].addEventListener("mouseover",function(){
+	
+	this.style.color="green";
+})
+}
+for(var i=0;i<lis.length;i++){
+lis[i].addEventListener("mouseout",function(){
+	
+	this.style.color="pink";
+})
+}
+for(var i=0;i<lis.length;i++){
+	lis[i].addEventListener("click",function(){
+		this.classList.toggle("clicked");
+	})
+}
+
+</script>
+
+
+</body>
+</html>
